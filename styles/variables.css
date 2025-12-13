@@ -1,6 +1,8 @@
 :root {
     --main-bg-color: #000;
     --primary-color: #A29BFE;
+    --alternate-bg-color: #4D4D4D;
     --text-color: #FFF;
     --border-radius: 1.5rem;
+    --little-border-radius: 0.8rem;
 }

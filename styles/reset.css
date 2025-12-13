@@ -52,6 +52,10 @@ a {
 button {
   border: none;
 }
+input, textarea, select {
+  border: none;
+
+}
 /*
   10. Create a root stacking context
 */

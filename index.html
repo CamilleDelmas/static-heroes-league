@@ -42,31 +42,31 @@
                 <article class="services__prestation prestation--1">
                     <h3>Super Déménagement</h3>
                     <p class="prestation__desc">Pour des déménagements sans effort et sans casse* !</p>
-                    <button>À partir de 233 €</button>
+                    <button class="button--price">À partir de 233 €</button>
                     <p class="prestation__conditions">* Nous ne pouvons malheureusement pas garantir que vos objets fragiles ou votre chat Gribouille survivront à un combat épique entre super-vilains lors du trajet.</p>
                 </article>
                 <article class="services__prestation prestation--2">
                     <h3>Livraison de Repas</h3>
                     <p class="prestation__desc">Pour des livraisons super-soniques*</p>
-                    <button>À partir de 12 €</button>
+                    <button class="button--price">À partir de 12 €</button>
                     <p class="prestation__conditions">* Pour éviter tout dommage à votre porte, merci de la laisser ouverte, certains super-héros n'ont pas conscience de leur force. Vous pouvez souscrire à notre assurance Porte en vrac pour 5 € de plus.</p>
                 </article>
                 <article class="services__prestation prestation--3">
                     <h3>Z'héro Bouchons</h3>
                     <p class="prestation__desc">Pour les clients pressés !*</p>
-                    <button>1,33 €/km</button>
+                    <button class="button--price">1,33 €/km</button>
                     <p class="prestation__conditions">* Le mode de déplacement peut être différent en fonction de la disponibilité des héros. Merci de préciser à la commande si vous avez le mal des transports soniques.</p>
                 </article>
                 <article class="services__prestation prestation--4">
                     <h3>Sauvetage de soirée</h3>
                     <p class="prestation__desc">Pour les soirées booooring !</p>
-                    <button>À partir de 50 €/h</button>
+                    <button class="button--price">À partir de 50 €/h</button>
                     <p class="prestation__conditions">* Nous ne pouvons malheureusement pas garantir que votre super-héros ne se fera pas la malle si la soirée n'est pas sauvable.</p>
                 </article>
                 <article class="services__prestation prestation--5">
                     <h3>Moral à Z'héro</h3>
                     <p class="prestation__desc">Pour les jours gris et les cœurs lourds, des héros au moral d'acier.*</p>
-                    <button>À partir de 100 €</button>
+                    <button class="button--price">À partir de 100 €</button>
                     <p class="prestation__conditions">* Il peut arriver que le moral de votre héros ne soit pas au beau fixe et vous bassine avec sa défaite de la veille, dans ce cas, nous vous remboursons 50 % de la prestation.</p>
                 </article>
             </section>
@@ -154,9 +154,25 @@
         </section>
         <section id="contact">
             <h2>Sauvez-moi !</h2>
-            <form action="">
-
-            </form>
+            <section class="contact">
+                <form action="" method="post">
+                    <label for="champ-nom">Nom</label>
+                    <input class="contact__input" type="text" name="nom" id="champ-nom">
+                    <label for="champ-email">Email</label>
+                    <input class="contact__input" type="email" name="email" id="champ-email">
+                    <label for="list-service">Service</label>
+                    <select class="contact__input" name="service" id="list-service">
+                        <option value="demenagement">Super déménagement</option>
+                        <option value="livraison">Livraison de repas</option>
+                        <option value="transport">Z'héro bouchons</option>
+                        <option value="ambiance">Sauvetage de soirée</option>
+                        <option value="moral">Moral à z'héro</option>
+                    </select>
+                    <label for="champ-message">Message</label>
+                    <textarea class="contact__input input--text" name="message" id="champ-message"></textarea>
+                </form>
+                <button><a href="">envoyer</a></button>
+            </section>
         </section>
     </main>
     <footer>
