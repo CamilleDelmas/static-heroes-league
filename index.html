@@ -28,17 +28,17 @@
                 </ul>
             </nav>
         </section>
+    </header>
+    <main>
         <section class="banner">
             <div class="banner__title">
                 <h1>Heros League</h1>
                 <p>Des gens un peu spéciaux, pour des problèmes pas tout à fait normaux</p>
             </div>
         </section>
-    </header>
-    <main>
         <section id="services">
             <h2>Nos <span class="super">supers</span> Services</h2>
-            <section class="services">
+            <div class="services">
                 <article class="services__prestation prestation--1">
                     <h3>Super Déménagement</h3>
                     <p class="prestation__desc">Pour des déménagements sans effort et sans casse* !</p>
@@ -69,13 +69,16 @@
                     <button class="button--price">À partir de 100 €</button>
                     <p class="prestation__conditions">* Il peut arriver que le moral de votre héros ne soit pas au beau fixe et vous bassine avec sa défaite de la veille, dans ce cas, nous vous remboursons 50 % de la prestation.</p>
                 </article>
-            </section>
+            </div>
         </section>
         <section id="heroes">
             <h2>Nos <span class="super">supers</span> Héros</h2>
-            <section class="heroes">
+            <div class="heroes">
                 <article class="heroes__card">
                     <figure><img src="ressources/images/catastrophic.png" alt=""></figure>
+                    <div class="info">
+                        Ne contrôle pas tout à fait sa patte droite, et peut être amené à vous mettre une - plus ou moins petite - tape sur la tête.
+                    </div>
                     <div class="card__desc">
                         <h3>Cat Astrophic</h3>
                         <p>Avec son super ronron, il saura vous réconforter dans n'importe quelle situation.</p>
@@ -83,6 +86,9 @@
                 </article>
                 <article class="heroes__card">
                     <figure><img src="ressources/images/carotte-woman.png" alt=""></figure>
+                    <div class="info">
+                        Attention, elle essaiera souvent de vous faire payer plus que le prix convenu avec Heros League. N'acceptez pas.
+                    </div>
                     <div class="card__desc">
                         <h3>Carotte Woman</h3>
                         <p>Mis à part son apparence de carotte, on ne sait pas bien à quoi elle est forte, mais on va trouver.</p>
@@ -90,6 +96,9 @@
                 </article>
                 <article class="heroes__card">
                     <figure><img src="ressources/images/ultraquenarde.png" alt=""></figure>
+                    <div class="info">
+                        Vous sort du traquenard… Mais il arrive qu'elle vous entraîne dans un autre.
+                    </div>
                     <div class="card__desc">
                         <h3>Ultraquenarde</h3>
                         <p>Peut vous sortir de n'importe quel traquenard.</p>
@@ -97,6 +106,9 @@
                 </article>
                 <article class="heroes__card">
                     <figure><img src="ressources/images/poulpy.png" alt=""></figure>
+                    <div class="info">
+                        Un peu collant
+                    </div>
                     <div class="card__desc">
                         <h3>Poulpy</h3>
                         <p>Il a des tentacules gigantesques, super pratique pour les déménagements.</p>
@@ -104,6 +116,9 @@
                 </article>
                 <article class="heroes__card">
                     <figure><img src="ressources/images/oran-wu-tang-clan.png" alt=""></figure>
+                    <div class="info">
+                        Peut être amené à vous demander de financer son prochain album, ne pas accepter.
+                    </div>
                     <div class="card__desc">
                         <h3>Orang Wu-Tang Clan</h3>
                         <p>Un gros singe agile, multi-tâche, qui intervient tout en rappant.</p>
@@ -111,17 +126,20 @@
                 </article>
                 <article class="heroes__card">
                     <figure><img src="ressources/images/superime.png" alt=""></figure>
+                    <div class="info">
+                        N'a plus de pouvoir mais refuse de l'admettre, peut être amené à vous raconter des histoires de l'époque où il était encore super.
+                    </div>
                     <div class="card__desc">
                         <h3>Superimé</h3>
                         <p>Un feu super-héro qui ne veut pas partir à la retraite.</p>
                     </div>
                 </article>
-            </section>
+            </div>
             <button><a href="">Tous nos héros</a></button>
         </section>
         <section id="testimonies">
             <h2>Les Témoignages de nos <span class="super">supers</span> clients</h2>
-            <section class="testimonies">
+            <div class="testimonies">
                 <article class="testimonies__card">
                     <figure><img src="ressources/images/testimony-1.png" alt=""></figure>
                     <div class="testimonial">
@@ -150,11 +168,11 @@
                         <p>"Supervif a été super, il m'a sortie des bouchons et amenée au travail en un temps record. Par contre j'aimerais bien retrouver ma voiture maintenant."</p>
                     </div>
                 </article>
-            </section>
+            </div>
         </section>
         <section id="contact">
             <h2>Sauvez-moi !</h2>
-            <section class="contact">
+            <div class="contact">
                 <form action="" method="post">
                     <label for="champ-nom">Nom</label>
                     <input class="contact__input" type="text" name="nom" id="champ-nom">
@@ -172,7 +190,7 @@
                     <textarea class="contact__input input--text" name="message" id="champ-message"></textarea>
                 </form>
                 <button><a href="">envoyer</a></button>
-            </section>
+            </div>
         </section>
     </main>
     <footer class="curved">

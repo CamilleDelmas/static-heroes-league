@@ -5,18 +5,19 @@ body {
     background-color: var(--main-bg-color);
     color: var(--text-color);
     font-size: 16px;
+    width: 100%;
 }
 
-section {
-    margin-block: 4rem;
+main {
+        padding: 0 1.5rem;
 }
-
 section.menu {
     margin: 2rem 0 0 0 ;
 }
 
 a {
     color: var(--text-color);
+    transition: all 300ms ease-in-out;
 }
 
 button {
@@ -35,8 +36,11 @@ button {
     text-transform: none;
 }
 
+section {
+    margin-block: 4rem;
+}
+
 header, .services, .heroes, .testimonies, .contact, footer {
-    padding: 0 1.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -51,11 +55,17 @@ header, .services, .heroes, .testimonies, .contact, footer {
 }
 
 header {
+    padding: 0 1.5rem;
     nav {
         display: none;
+        a:hover {
+    color: var(--primary-color);
+}
     }
-    .banner {
-        
+
+}
+
+.banner {
         width: 100%;
         margin-block-start: 1rem;
         margin-block-end: 0;
@@ -79,12 +89,12 @@ header {
             }
         }
     }
-}
 
 h2 {
     text-align: center;
     font-size: 2rem;
     font-weight: 900;
+    margin-block-end: 4rem;
     .super {
         color: var(--primary-color);
     }
@@ -126,15 +136,21 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    .heroes {
+    margin-block-end: 2rem;
+    }
     .heroes__card {
         position: relative;
         img {
             width: 100%;
             border-radius: var(--border-radius);
         }
+        .info {
+            display: none;
+        }
         .card__desc {
             width: 100%;
-            height: 55%;
+            max-height: 55%;
             border-radius: 0 0 1.5rem 1.5rem;
             background-color: rgba(0, 0, 0, 0.4);;
             position: absolute;
@@ -151,6 +167,25 @@ h2 {
             font-weight: 900;
         }
     }
+    .heroes__card:hover {
+        .info {
+            font-size: 0.9rem;
+            width: 100%;
+            max-height: 55%;
+            display: block;
+            position: absolute;
+            top: 0;
+            background-color: rgba(222, 170, 255, 0.658);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+            text-align: center;
+            border-radius: 1.5rem 1.5rem 0 0;
+            font-family: "Satoshi-VariableItalic"
+        }
+    }
 }
 
 
@@ -161,8 +196,12 @@ h2 {
     flex-direction: column;
     align-items: center;
     img {
+        aspect-ratio: 1/1;
         width: 100%;
+        height: auto;
+        /* max-height: 20rem; */
         object-fit: cover;
+        object-position: 50% 50%;
         border-radius: 1.5rem 1.5rem 50% 50%;
         border: 0.6rem solid var(--primary-color);
     }
@@ -175,6 +214,7 @@ h2 {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        font-size: 0.9rem;
         .testimonial__author {
             font-size: 1.2rem;
             font-weight: 800;
@@ -239,6 +279,9 @@ footer {
             li {
                 display: block;
                 text-align: center;
+                a:hover {
+                    font-weight: 600;
+                }
             }
     }
     p {
@@ -247,7 +290,7 @@ footer {
 }
 
 /* Styles pour tablettes */
-@media screen and (min-width: 601px) and (max-width: 1024px) {
+@media screen and (min-width: 700px) and (max-width: 1024px) {
     header {
         .menu {
             display: flex;
@@ -272,7 +315,7 @@ footer {
     h2 {
         position: relative;
         width: max-content;
-        margin: auto;
+        margin: 0 auto 4rem auto;
         &::before {
             content: "";
             position: absolute;
@@ -292,15 +335,223 @@ footer {
             right: -4rem;
         }   
     }
+
+.services {
+    display: grid;
+    grid-template-areas:
+    "a b"
+    "c d"
+    "e e";
+    width: 100%;
+    height: auto;
+        .prestation--1 {
+            grid-area: a;
+        }
+        .prestation--2 {
+            grid-area: b;
+        }
+        .prestation--3 {
+            grid-area: c;
+        }
+        .prestation--4 {
+            grid-area: d;
+        }
+        .prestation--5 {
+            grid-area: e;
+        }
+        .services__prestation {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .heroes {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+        .heroes__card {
+            width: 48%;
+        }
+    }
     
+    .testimonies {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1rem;
+        align-items: stretch;
+        justify-content: center;
+        .testimonies__card {
+            border-radius: 50% 50% 1.5rem 1.5rem / 40% 40% 1.5rem 1.5rem;
+            width: 48%;
+            justify-content: space-between;
+            img {
+                border-radius: 50% 50%; 
+            }
+            .testimonial {
+                margin-block-start: 0.5rem;
+                padding: 1rem;
+            }
+        }
+    }
 
+    #contact {
+    form {
+        width: 80%;
+    }
+    }
 
-
-
+    footer {
+    ul {
+        flex-direction: row;
+    }
+}
+    .logo {
+        padding-block: 1.5rem 0;
+    }
 }
 
 
 /* Styles pour desktop */
 @media screen and (min-width: 1025px) {
+
+    section.menu {
+    margin: 0;
+    }
+
+    header {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        background-color: rgba(0, 0, 0, 0.4);
+        .logo {
+            padding: 0;
+        }
+    .menu {
+        width: 100%;
+        padding: 1rem 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    nav {
+        display: flex;
+        font-weight: 800;
+        ul {
+            list-style-type: none;
+            display: flex;
+            gap: 2rem;
+                li {
+                    display: block;
+                    text-align: center;
+                }
+        }
+        }
+    }
+
+    h2 {
+        position: relative;
+        width: max-content;
+        margin: 0 auto 4rem auto;
+        &::before {
+            content: "";
+            position: absolute;
+            height: 2px;
+            width: 2rem;
+            background-color: var(--primary-color);
+            top: 50%;
+            left: -4rem;
+        }  
+        &::after {
+            content: "";
+            position: absolute;
+            height: 2px;
+            width: 2rem;
+            background-color: var(--primary-color);
+            top: 50%;
+            right: -4rem;
+        }   
+    }
+
+.services {
+    display: grid;
+    grid-template-areas:
+    "a b b"
+    "a c d"
+    "e e d";
+    margin: auto;
+    width: 90%;
+    height: auto;
+        .prestation--1 {
+            grid-area: a;
+        }
+        .prestation--2 {
+            grid-area: b;
+        }
+        .prestation--3 {
+            grid-area: c;
+        }
+        .prestation--4 {
+            grid-area: d;
+        }
+        .prestation--5 {
+            grid-area: e;
+        }
+        .services__prestation {
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+    }
+
+    .heroes {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+            width: 90%;
+        .heroes__card {
+            width: 32%;
+        }
+    }
     
+    .testimonies {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 3rem;
+        align-items: stretch;
+        justify-content: center;
+        .testimonies__card {
+            border-radius: 50% 50% 1.5rem 1.5rem / 28% 28% 1.5rem 1.5rem;
+            width: 18rem;
+            justify-content: flex-start;
+            img {
+                border-radius: 50% 50%; 
+            }
+            .testimonial {
+                margin-block-start: 1rem;
+                padding: 1rem;
+            }
+        }
+    }
+
+    #contact {
+    form {
+        width: 50%;
+    }
+    }
+
+    footer {
+    ul {
+        flex-direction: row;
+    }
+}
+    .logo {
+        padding-block: 1.5rem 0;
+    }
 }
