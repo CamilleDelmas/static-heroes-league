@@ -1,5 +1,9 @@
 @import url('satoshi.css');
 
+html {
+        scroll-behavior: smooth;
+}
+
 body {
     font-family: "Satoshi-Variable", sans-serif;
     background-color: var(--main-bg-color);
